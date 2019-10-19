@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "properties": {
+        "name":{
+            "type":"string"
+        },
+        "id":{
+            "type":"integer"
+        },
+        "type":{
+            "type":"string"
+        },
+        "color":{
+            "type":"string"
+        },
+        "age":{
+            "type":"integer"
+        },
+        "breed":{
+            "type":"string"
+        },
+        "ownerId":{
+            "type":"integer"
+        }
+    },
+    "required": ["ownerId","breed","age","color","name","type"]
+}

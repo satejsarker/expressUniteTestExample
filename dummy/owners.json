@@ -1,0 +1,18 @@
+{
+    "owners":[
+        {
+            "id":1,
+            "name":"satej",
+            "email":"satejall@gmail.com",
+            "phone":"8801672089143",
+            "address":"nikunjo dhaka"
+        },
+        {
+            "id":2,
+            "name":"gunjan",
+            "email":"gunjan@gmail.com",
+            "phone":"1123123123123",
+            "address":"nikunjo dhaka"
+        }
+    ]
+}
