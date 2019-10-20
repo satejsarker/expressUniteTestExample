@@ -22,7 +22,7 @@ class PetController{
                 console.log(err);
                 return false;
             }
-                    console.log("file updated")
+                  
                 return true;
         
               });
@@ -32,7 +32,7 @@ class PetController{
     static async addPet(req,res){
         
         if(!ajv.validate(petSchema, req.body)){
-            console.log(ajv.ValidationError)
+           
             return res.status(400).json({
                error: ajv.errors,
                message:"Not valid data"
@@ -64,7 +64,7 @@ class PetController{
        
 static async editPet(req,res){
     if(!ajv.validate(petSchema, req.body)){
-        console.log(ajv.ValidationError)
+        
         return res.status(400).json({
            error: ajv.errors,
            message:"Not valid data"
@@ -74,9 +74,8 @@ static async editPet(req,res){
 
    
     let _checkPet=pets.pets.findIndex(pet=>pet.id==pet_id)
-    console.log(_checkPet)
     if(_checkPet>=0){
-        console.log(_checkPet)
+    
         let prevData=pets;
         prevData.pets[_checkPet]=req.body;
         prevData.pets[_checkPet]["id"]=pet_id

@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import routes from './routes/index';
+
 import ownerRoutes from './routes/ownerRoute';
 import petRoute from './routes/petRoute';
 
@@ -19,7 +19,11 @@ app.use(bodyParser.json());
 // Register our routes in app
 app.use('/owner',ownerRoutes)
 app.use('/pet',petRoute)
-app.use('/', routes);
+app.get("*",(req,res)=>{
+    res.status(200).json({
+        message:"Express REST API"
+    })
+})
 
 // Start our server
 app.listen(port, () => {
